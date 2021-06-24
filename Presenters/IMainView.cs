@@ -12,5 +12,9 @@ namespace Presenters
         /// Show form
         /// </summary>
         void Show();
+
+        event Action SendData;
+        void Recolor();
+        void OutputData(int value);
     }
 }

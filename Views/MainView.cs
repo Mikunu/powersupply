@@ -31,7 +31,28 @@ namespace Views
         public new void Show()
         {
             Application.Run(this);
-        } 
+        }
         #endregion
+
+        public event Action SendData;
+        public void Recolor()
+        {
+            var t = new Random();
+            button1.BackColor = Color.FromArgb(
+                100, 
+                t.Next(0, 255),
+                t.Next(0, 255), 
+                t.Next(0, 255));
+        }
+
+        public void OutputData(int value)
+        {
+            textBox1.Text = value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SendData?.Invoke();
+        }
     }
 }

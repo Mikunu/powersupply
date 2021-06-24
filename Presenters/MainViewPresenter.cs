@@ -37,6 +37,13 @@ namespace Presenters
         {
             MainView = mainView;
             MainModel = mainModel;
+            mainView.SendData += MainViewOnSendData;
+        }
+
+        private void MainViewOnSendData()
+        {
+            MainView.Recolor();
+            MainView.OutputData(MainModel.GetData());
         }
 
         #endregion

@@ -11,6 +11,7 @@ namespace Models
     /// </summary>
     public class MainModel : IMainModel
     {
+        private int RandomValue { get; set; }
         #region Constuctor
 
         /// <summary>
@@ -18,8 +19,15 @@ namespace Models
         /// </summary>
         public MainModel()
         {
+            RandomValue = new Random().Next(0, 10);
         }
 
         #endregion
+
+        public int GetData()
+        {
+            RandomValue = new Random().Next(0, 10);
+            return RandomValue;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Views
 {
-    partial class Form1
+    partial class MainView
     {
         /// <summary>
         /// Обязательная переменная конструктора.

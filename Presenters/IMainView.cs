@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presenters
 {
-    public class Class1
+    public interface IMainView
     {
     }
 }

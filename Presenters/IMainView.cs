@@ -8,5 +8,9 @@ namespace Presenters
 {
     public interface IMainView
     {
+        /// <summary>
+        /// Show form
+        /// </summary>
+        void Show();
     }
 }

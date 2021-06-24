@@ -18,8 +18,9 @@ namespace Views
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Init Presenter
             MainViewPresenter mainViewPresenter = new MainViewPresenter(new MainView(), new MainModel());
-            Application.Run(new MainView());
+            mainViewPresenter.Run();
         }
     }
 }

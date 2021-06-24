@@ -18,6 +18,7 @@ namespace Presenters
         /// Main View Exemplyar
         /// </summary>
         private IMainView MainView { get; set; }
+
         /// <summary>
         /// Main Model Exemplyar
         /// </summary>
@@ -32,11 +33,22 @@ namespace Presenters
         /// </summary>
         /// <param name="mainView">Exemplyar of class which implement <see cref="IMainView"/></param>
         /// <param name="mainModel">Exemplyar of class which implement <see cref="IMainModel"/></param>
-
         public MainViewPresenter(IMainView mainView, IMainModel mainModel)
         {
             MainView = mainView;
             MainModel = mainModel;
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Run form Main View
+        /// </summary>
+        public void Run()
+        {
+            MainView.Show();
         }
 
         #endregion
